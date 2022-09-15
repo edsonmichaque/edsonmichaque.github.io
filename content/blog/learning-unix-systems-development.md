@@ -1,7 +1,7 @@
 ---
 title: "Learning Unix Systems Development"
 date: 2022-09-14T11:41:59+02:00
-draft: false
+draft: true
 ---
 
 Nowdays it's very hard to have a real UNIX Operating System at your hands, in fact I've never had one beside macOS,

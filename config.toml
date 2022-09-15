@@ -15,4 +15,4 @@ unsafe = true
 ordered = true
 
 [outputs]
-section = ["HTML"]
+section = ["HTML", "RSS"]
