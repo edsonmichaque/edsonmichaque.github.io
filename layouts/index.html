@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+
+<main class="index">
+  <section class="article-list">
+    <h1><a href="/">{{$.Title}}</a></h1>
+
+    {{ range (where (where .Site.RegularPages "Section" "blog") "Params.nohtml" "!=" "true") }}
+    {{- if .OutputFormats.Get "html" }}
+    <div class="article">
+      <span class="date">{{.Date.Format "January 2, 2006"}}</span>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+  </section>
+
+</main>

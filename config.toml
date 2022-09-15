@@ -1,0 +1,18 @@
+baseURL = "https://edsonmichaque.com/"
+title = "Edson Michaque"
+pygmentsUseClasses = true
+uglyurls = true
+disablePathToLower = true
+rssLimit = 10
+
+[permalinks]
+blog = "/:year/:month/:day/:filename"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+ordered = true
+
+[outputs]
+section = ["HTML"]

@@ -1,0 +1,171 @@
+:root {
+  --stone-color: #81676c;
+  --homo-color: #e44d2e;
+  --art-color: #0087BD;
+  --agri-color: #71BC78;
+  --civi-color: #7851A9;
+  --industry-color: #708090;
+}
+
+body {
+	width: 1001px;
+	margin: 0 auto;
+	font-family: sans-serif;
+	padding: 1rem 0 2rem 0;
+}
+
+@media(min-width: 1000px) {
+	.small-screens {
+		display: none;
+	}
+}
+
+h1 small {
+	float: right;
+	font-size: 1rem;
+}
+
+.key .ten, .key .thousand {
+	display: block;
+	margin-left: -1px;
+}
+
+.key .ten:after {
+	display: block;
+	width: 12px;
+	height: 5px;
+	content: ' ';
+	background-size: 10px 10px;
+	background-image:
+		linear-gradient(to right, #333 2px, transparent 1px),
+		linear-gradient(to bottom, #333 2px, transparent 1px);
+}
+
+.key .thousand:after {
+	margin-bottom: 5px;
+	display: block;
+	width: 1002px;
+	height: 5px;
+	content: ' ';
+	background-size: 10px 10px;
+	background-image:
+		linear-gradient(to right, #333 2px, transparent 1px),
+		linear-gradient(to bottom, #333 2px, transparent 1px);
+}
+
+.era {
+	background-size: 10px 10px;
+	width: 100%;
+}
+
+.era > span {
+	text-shadow: black 1px 0 10px;
+	font-weight: bold;
+	color: white;
+	margin: 1rem 0 0 1rem;
+}
+
+.transition {
+	position: relative;
+	width: 100%;
+	height: 10px;
+}
+
+.transition > span {
+	position: absolute;
+	background-size: 10px 10px;
+	display: block;
+	height: 100%;
+}
+
+.stone {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--stone-color) 1px);
+}
+
+.era.stone {
+	height: 31000px;
+}
+
+.homo-sapiens {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--homo-color) 1px);
+}
+
+.era.homo-sapiens {
+	height: 1300px;
+}
+
+.art {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--art-color) 1px);
+}
+
+.era.art {
+	height: 600px;
+}
+
+.transition .art {
+	width: 500px;
+}
+
+.transition .agriculture {
+	left: 500px;
+	width: 501px;
+}
+
+.agriculture {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--agri-color) 1px);
+}
+
+.era.agriculture {
+	height: 50px;
+}
+
+.civilization {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--civi-color) 1px);
+}
+
+.era.civilization {
+	height: 20px;
+}
+
+.transition.modern {
+	height: 11px;
+}
+
+.transition.modern > span > span {
+	position: absolute;
+	top: 10px;
+	border-left: 1px solid black;
+	padding-left: 0.25rem;
+}
+
+.transition .civilization {
+	width: 740px;
+}
+
+.transition .industry {
+	left: 740px;
+	width: 180px;
+}
+
+.industry, .ww2 {
+	background-image:
+		linear-gradient(to right, #333 1px, transparent 1px),
+		linear-gradient(to bottom, #333 1px, var(--industry-color) 1px);
+}
+
+.transition .ww2 {
+	left: 920px;
+	width: 81px;
+	overflow: visible;
+	white-space: nowrap;
+}

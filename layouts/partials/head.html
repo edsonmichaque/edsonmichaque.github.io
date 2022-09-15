@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ if $.Params.noindex }}
+  <meta name="robots" content="noindex">
+  {{ end }}
+  <title>{{$.Title}}</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://edsonmichaque.com/blog/index.xml">
+  <link rel="icon" type="image/png" href="/avatar.png">
+  {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
